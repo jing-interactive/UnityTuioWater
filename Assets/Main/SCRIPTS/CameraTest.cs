@@ -3,11 +3,15 @@ using UnityEngine;
 
 public class CameraTest : MonoBehaviour
 {
+    public GameObject prefab;
+    
     private GameObject tuioCursor;
 
     private void Start()
     {
-        tuioCursor = GameObject.Find("tuioCursor");
+        // tuioCursor = GameObject.Find("tuioCursor");
+        tuioCursor = Instantiate(prefab);
+        Debug.Log(tuioCursor);
     }
 
     private void Update()
@@ -19,6 +23,7 @@ public class CameraTest : MonoBehaviour
     {
         if (TouchManager.Instance != null)
         {
+            Debug.Log("OnEnable");
             TouchManager.Instance.TouchesMoved += touchBeganHandler;
         }
     }
@@ -27,6 +32,7 @@ public class CameraTest : MonoBehaviour
     {
         if (TouchManager.Instance != null)
         {
+            Debug.Log("OnDisable");
             TouchManager.Instance.TouchesMoved -= touchBeganHandler;
         }
     }
