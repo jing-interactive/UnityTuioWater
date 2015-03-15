@@ -1,21 +1,20 @@
 ﻿using TouchScript;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class CameraTest : MonoBehaviour
 {
-    public GameObject prefab;
-    
-    private GameObject tuioCursor;
+    GameObject mPrefab;
+    List<GameObject> mFxWaters; // https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx
 
     private void Start()
     {
-        // tuioCursor = GameObject.Find("tuioCursor");
-        tuioCursor = Instantiate(prefab);
-        Debug.Log(tuioCursor);
+        mFxWaters = new List<GameObject>();
+        mPrefab = GameObject.Find("FX_WATER");
     }
 
     private void Update()
-    { 
+    {
 
     }
 
@@ -23,29 +22,43 @@ public class CameraTest : MonoBehaviour
     {
         if (TouchManager.Instance != null)
         {
-            Debug.Log("OnEnable");
-            TouchManager.Instance.TouchesMoved += touchBeganHandler;
-        }
-    }
+            // http://touchscript.github.io/docs/Index.html
+            TouchManager.Instance.TouchesMoved += (sender, args) =>
+            {
+                int newCount = args.Touches.Count - mFxWaters.Count;
+                for (int i = 0; i < newCount; i++)
+                {
+                    print("Add");
+                    mFxWaters.Add(Instantiate(mPrefab));
+                }
+                
+                for (int i = 0; i < args.Touches.Count; i++)
+                {
+                    var fxWater = mFxWaters[i];
+                    var touch = args.Touches[i];
+                    fxWater.SetActive(true);
+                    RaycastHit hit;
+                    if (Physics.Raycast(Camera.main.ScreenPointToRay(touch.Position), out hit))
+                    {
+                        // file:///C:/Program%20Files/Unity%205.0.0b21/Editor/Data/Documentation/en/ScriptReference/Physics.Raycast.html
+                        // print("Hit " + touch.Id);
+                        fxWater.transform.position = hit.point;
+                    }
+                }
+            };
 
-    private void OnDisable()
-    {
-        if (TouchManager.Instance != null)
-        {
-            Debug.Log("OnDisable");
-            TouchManager.Instance.TouchesMoved -= touchBeganHandler;
-        }
-    }
-
-    private void touchBeganHandler(object sender, TouchEventArgs e)
-    {
-        foreach (var point in e.Touches)
-        {
-            RaycastHit hit; 
-            if (!Physics.Raycast(Camera.main.ScreenPointToRay(point.Position), out hit)) 
-                return;
-            // Debug.Log(hit.point);
-            tuioCursor.transform.position = hit.point;
+            TouchManager.Instance.TouchesEnded += (sender, args) =>
+            {
+                // foreach (var touch in args.Touches)
+                // {
+                //     print("Ended " + touch.Id);
+                // }
+                foreach (var fxWater in mFxWaters)
+                {
+                    fxWater.transform.position = Vector3.zero;
+                    print(fxWater.transform.position);
+                }
+            };
         }
     }
 }

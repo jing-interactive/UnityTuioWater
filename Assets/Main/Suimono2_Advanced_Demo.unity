@@ -164,6 +164,41 @@ NavMeshSettings:
     cellSize: .166666657
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &8649058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 8649059}
+  - 81: {fileID: 8649060}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8649059
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 8649058}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.300000012, y: -3.4000001, z: 15.8000002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 63079641}
+  m_RootOrder: 1
+--- !u!81 &8649060
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 8649058}
+  m_Enabled: 1
 --- !u!1 &56407220
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,72 +288,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 56407220}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &58930040
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100002, guid: c4e3cb7edc0871d40943bd5f5344c6bc, type: 2}
-  m_PrefabInternal: {fileID: 63900429}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 58930041}
-  - 33: {fileID: 58930043}
-  - 23: {fileID: 58930042}
-  m_Layer: 0
-  m_Name: BS_SkyObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &58930041
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400002, guid: c4e3cb7edc0871d40943bd5f5344c6bc, type: 2}
-  m_PrefabInternal: {fileID: 63900429}
-  m_GameObject: {fileID: 58930040}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1018543067}
-  m_RootOrder: 0
---- !u!23 &58930042
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2300000, guid: c4e3cb7edc0871d40943bd5f5344c6bc,
-    type: 2}
-  m_PrefabInternal: {fileID: 63900429}
-  m_GameObject: {fileID: 58930040}
-  m_Enabled: 0
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapIndexDynamic: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 2100000, guid: 179e4c8dc7e6b0342aa6600f36385d85, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!33 &58930043
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3300000, guid: c4e3cb7edc0871d40943bd5f5344c6bc,
-    type: 2}
-  m_PrefabInternal: {fileID: 63900429}
-  m_GameObject: {fileID: 58930040}
-  m_Mesh: {fileID: 4300000, guid: 90e1eaab72790e043a2a10c42c1eb011, type: 3}
 --- !u!1 &63079635
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +298,6 @@ GameObject:
   - 4: {fileID: 63079641}
   - 20: {fileID: 63079640}
   - 92: {fileID: 63079639}
-  - 81: {fileID: 63079638}
   - 114: {fileID: 63079636}
   m_Layer: 0
   m_Name: Main Camera
@@ -349,14 +317,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cd7a9aaae5aa7d43ab80f8b00dc15c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
---- !u!81 &63079638
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 63079635}
-  m_Enabled: 0
 --- !u!92 &63079639
 Behaviour:
   m_ObjectHideFlags: 0
@@ -407,6 +367,7 @@ Transform:
   m_LocalScale: {x: 1.00019693, y: 1.05491972, z: 1.05474615}
   m_Children:
   - {fileID: 1018543067}
+  - {fileID: 8649059}
   m_Father: {fileID: 0}
   m_RootOrder: 4
 --- !u!1001 &63900429
@@ -454,7 +415,6 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4e3cb7edc0871d40943bd5f5344c6bc, type: 2}
-  m_RootGameObject: {fileID: 133560933}
   m_IsPrefabParent: 0
 --- !u!1001 &99079226
 Prefab:
@@ -467,46 +427,13 @@ Prefab:
       propertyPath: layers.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 1c4dd8a13f501b04f84fe824120f70bb, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c4dd8a13f501b04f84fe824120f70bb, type: 2}
-  m_RootGameObject: {fileID: 2105030664}
   m_IsPrefabParent: 0
---- !u!1 &133560933
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100000, guid: c4e3cb7edc0871d40943bd5f5344c6bc, type: 2}
-  m_PrefabInternal: {fileID: 63900429}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1018543067}
-  - 114: {fileID: 133560934}
-  m_Layer: 0
-  m_Name: BetterSkybox
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &133560934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: c4e3cb7edc0871d40943bd5f5344c6bc,
-    type: 2}
-  m_PrefabInternal: {fileID: 63900429}
-  m_GameObject: {fileID: 133560933}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d4a875b2d90ba9438949f09f311e487, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BSVersionNumber: 0.0.1
-  skyIndex: 2
-  skyUseIndex: 0
-  lockRotation: 0
-  yRotation: 0
-  customSpheremap2D: {fileID: 2800000, guid: 1e7b45ef36e400f4ebe775d097d89dd1, type: 3}
-  useMat: {fileID: 2100000, guid: 179e4c8dc7e6b0342aa6600f36385d85, type: 2}
-  alphaMat: {fileID: 2100000, guid: ee14a60c93942734fb971530a0a11ea7, type: 2}
 --- !u!1 &319153935
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,7 +467,7 @@ MeshRenderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 706783255}
+  - {fileID: 2100000, guid: 434999af31d77af4aacb107170c00ba3, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -631,7 +558,7 @@ MeshRenderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1249349500}
+  - {fileID: 2100000, guid: df4f3b7f86753fe4dbd3dc92a60ce25e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1774,463 +1701,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1266890567}
   m_RootOrder: 1
---- !u!1 &700188508
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 700188510}
-  - 81: {fileID: 700188509}
-  m_Layer: 0
-  m_Name: Audio
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!81 &700188509
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 700188508}
-  m_Enabled: 1
---- !u!4 &700188510
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 700188508}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 246.649994, y: 10.5799713, z: 231.619995}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
---- !u!21 &706783255
-Material:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Suimono2/water_pro
-  m_Shader: {fileID: 4800000, guid: 9ed362ebfacf77143ae81b88d472a055, type: 3}
-  m_ShaderKeywords: 
-  m_CustomRenderQueue: -1
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-      data:
-        first:
-          name: _ReflectionTex
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _BlurRamp
-        second:
-          m_Texture: {fileID: 2800000, guid: e607ea0d8431dc64c8f345a02a1028e9, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Ramp2D
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _WaveLargeTex
-        second:
-          m_Texture: {fileID: 2800000, guid: 48e29dc2e9488474081bc20a42a364b9, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Surface1
-        second:
-          m_Texture: {fileID: 2800000, guid: 51323bc64857e644fac7400eb7305b36, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Surface2
-        second:
-          m_Texture: {fileID: 2800000, guid: 51323bc64857e644fac7400eb7305b36, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _WaveRamp
-        second:
-          m_Texture: {fileID: 2800000, guid: 7d47d30a7e6fff544a72f826670ef31b, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _DepthRamp
-        second:
-          m_Texture: {fileID: 2800000, guid: aa1f666bea9a5b2409ff3dcfc008a57c, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _FoamRamp
-        second:
-          m_Texture: {fileID: 2800000, guid: 01757909dcbf805408fe7867004a31a3, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _FoamTex
-        second:
-          m_Texture: {fileID: 2800000, guid: 14c55ed649175884784db6c178f4e654, type: 3}
-          m_Scale: {x: 8.2840004, y: 8.2840004}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _CubeTex
-        second:
-          m_Texture: {fileID: 8900000, guid: c27d2f9a7fe1df7448a59cd7e8306390, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _CubeBDRF
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _WaveTex
-        second:
-          m_Texture: {fileID: 2800000, guid: 9e0b039b60bba5c4ea73849d69af386a, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _FlowMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _WaveMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-    m_Floats:
-      data:
-        first:
-          name: _ReflDist
-        second: 160.399994
-      data:
-        first:
-          name: _ReflBlend
-        second: .0149999997
-      data:
-        first:
-          name: _MasterScale
-        second: 22.5
-      data:
-        first:
-          name: _BlurSpread
-        second: .432999998
-      data:
-        first:
-          name: _RefrStrength
-        second: 3.95499992
-      data:
-        first:
-          name: _RefrSpeed
-        second: .5
-      data:
-        first:
-          name: _DepthAmt
-        second: 4.44999981
-      data:
-        first:
-          name: _UnderReflDist
-        second: -4.28000021
-      data:
-        first:
-          name: _Tess
-        second: 20
-      data:
-        first:
-          name: _minDist
-        second: -34.2000008
-      data:
-        first:
-          name: _maxDist
-        second: 80
-      data:
-        first:
-          name: _Displacement
-        second: 1
-      data:
-        first:
-          name: _MaskAmt
-        second: 1
-      data:
-        first:
-          name: _WaveHeight
-        second: 2.00999999
-      data:
-        first:
-          name: _DetailHeight
-        second: .810000002
-      data:
-        first:
-          name: _WaveShoreHeight
-        second: 0
-      data:
-        first:
-          name: _WaveScale
-        second: .25
-      data:
-        first:
-          name: _CenterHeight
-        second: 0
-      data:
-        first:
-          name: _MaxVariance
-        second: 3
-      data:
-        first:
-          name: _RefrScale
-        second: 2.25
-      data:
-        first:
-          name: _SpecScatterWidth
-        second: 10
-      data:
-        first:
-          name: _SpecScatterAmt
-        second: .5
-      data:
-        first:
-          name: _ReflBlur
-        second: .00999999978
-      data:
-        first:
-          name: _FoamHeight
-        second: 1
-      data:
-        first:
-          name: _HeightFoamAmount
-        second: .310000002
-      data:
-        first:
-          name: _HeightFoamSpread
-        second: .50999999
-      data:
-        first:
-          name: _FoamSpread
-        second: .194999993
-      data:
-        first:
-          name: _EdgeBlend
-        second: .751999974
-      data:
-        first:
-          name: _EdgeSpread
-        second: 10
-      data:
-        first:
-          name: _BumpStrength
-        second: .172000006
-      data:
-        first:
-          name: _ReflectStrength
-        second: 61.5999985
-      data:
-        first:
-          name: _FlowScale
-        second: 0
-      data:
-        first:
-          name: _TideAmount
-        second: .300000012
-      data:
-        first:
-          name: _TideSpread
-        second: .513000011
-      data:
-        first:
-          name: _RimPower
-        second: 1
-      data:
-        first:
-          name: _castshadowEnabled
-        second: 1
-      data:
-        first:
-          name: _castshadowStrength
-        second: 1
-      data:
-        first:
-          name: _castshadowFade
-        second: 1
-      data:
-        first:
-          name: _suimono_uvx
-        second: -0
-      data:
-        first:
-          name: _suimono_uvy
-        second: -0
-      data:
-        first:
-          name: _suimono_uv2x
-        second: 0
-      data:
-        first:
-          name: _suimono_uv2y
-        second: 0
-      data:
-        first:
-          name: _suimono_uv3x
-        second: -0
-      data:
-        first:
-          name: _suimono_uv3y
-        second: -0
-      data:
-        first:
-          name: _suimono_uv4x
-        second: 0
-      data:
-        first:
-          name: _suimono_uv4y
-        second: 0
-      data:
-        first:
-          name: _suimono_DeepWaveHeight
-        second: 3.0150001
-      data:
-        first:
-          name: _suimono_DetailHeight
-        second: .810000002
-      data:
-        first:
-          name: _suimono_detScale
-        second: 10.5
-      data:
-        first:
-          name: _useDynamicReflections
-        second: 1
-    m_Colors:
-      data:
-        first:
-          name: _DynReflColor
-        second: {r: 1, g: 1, b: 1, a: .550000012}
-      data:
-        first:
-          name: _DepthColor
-        second: {r: 0, g: .790000021, b: 1, a: .100000001}
-      data:
-        first:
-          name: _DepthColorR
-        second: {r: .25, g: .25, b: .5, a: 1}
-      data:
-        first:
-          name: _DepthColorG
-        second: {r: 0, g: .670000017, b: 1, a: .230000004}
-      data:
-        first:
-          name: _DepthColorB
-        second: {r: .280000001, g: .469999999, b: .50999999, a: 1}
-      data:
-        first:
-          name: _HighColor
-        second: {r: 1, g: .810000002, b: 0, a: .289999992}
-      data:
-        first:
-          name: _LowColor
-        second: {r: 0, g: .790000021, b: 1, a: 0}
-      data:
-        first:
-          name: _SpecColorH
-        second: {r: .970000029, g: .970000029, b: .970000029, a: .660000026}
-      data:
-        first:
-          name: _SpecColorL
-        second: {r: .600000024, g: .980000019, b: 0, a: .769999981}
-      data:
-        first:
-          name: _FoamColor
-        second: {r: .920000017, g: .910000026, b: .879999995, a: 0}
-      data:
-        first:
-          name: _EdgeColor
-        second: {r: .730000019, g: 1, b: .939999998, a: 0}
-      data:
-        first:
-          name: _UnderColor
-        second: {r: .560000002, g: .930000007, b: 1, a: .839999974}
-      data:
-        first:
-          name: _TideColor
-        second: {r: .239999995, g: .340000004, b: .319999993, a: 0}
-      data:
-        first:
-          name: _castshadowColor
-        second: {r: 0, g: 0, b: 0, a: 1}
---- !u!1 &730710718
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100000, guid: c0dc5781cae4a6348b42ea6b818a3f9c, type: 2}
-  m_PrefabInternal: {fileID: 1023080767}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 730710720}
-  - 114: {fileID: 730710719}
-  m_Layer: 0
-  m_Name: Touch Debugger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &730710719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: c0dc5781cae4a6348b42ea6b818a3f9c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1023080767}
-  m_GameObject: {fileID: 730710718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 923107734, guid: 20c2a163775f09b4cafa29b19d0c9204, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  showTouchId: 1
-  showTags: 0
-  texture: {fileID: 2800000, guid: f5c75ed8c6bed0f489d9003aa739aff7, type: 3}
-  useDPI: 1
-  touchSize: 1
-  fontColor: {r: 0, g: 1, b: 1, a: 1}
---- !u!4 &730710720
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400000, guid: c0dc5781cae4a6348b42ea6b818a3f9c, type: 2}
-  m_PrefabInternal: {fileID: 1023080767}
-  m_GameObject: {fileID: 730710718}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
 --- !u!1 &769597443
 GameObject:
   m_ObjectHideFlags: 0
@@ -2252,13 +1722,13 @@ Transform:
   m_PrefabParentObject: {fileID: 400110, guid: b493a5d859d24e943a80b420b49a7a54, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 769597443}
-  m_LocalRotation: {x: 0, y: -.999598503, z: 0, w: -.0283360519}
-  m_LocalPosition: {x: .000862039451, y: .0289735794, z: .0548396707}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: -.0409384109, z: 0, w: -.99916172}
+  m_LocalPosition: {x: 246.62471, y: 10.6669207, z: 231.457413}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 2102519851}
   - {fileID: 1295575189}
-  m_Father: {fileID: 1854471773}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!1 &828744651
 GameObject:
@@ -3501,17 +2971,8 @@ MonoBehaviour:
   parentMesh: {fileID: 0}
 --- !u!4 &1018543067
 Transform:
-  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: c4e3cb7edc0871d40943bd5f5344c6bc, type: 2}
   m_PrefabInternal: {fileID: 63900429}
-  m_GameObject: {fileID: 133560933}
-  m_LocalRotation: {x: -.707106888, y: 4.2139547e-07, z: -3.81852203e-07, w: .707106769}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 50, y: 50, z: 50}
-  m_Children:
-  - {fileID: 58930041}
-  m_Father: {fileID: 63079641}
-  m_RootOrder: 0
 --- !u!1001 &1023080767
 Prefab:
   m_ObjectHideFlags: 0
@@ -3521,392 +2982,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: c0dc5781cae4a6348b42ea6b818a3f9c, type: 2}
       propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: c0dc5781cae4a6348b42ea6b818a3f9c, type: 2}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0dc5781cae4a6348b42ea6b818a3f9c, type: 2}
-  m_RootGameObject: {fileID: 730710718}
   m_IsPrefabParent: 0
---- !u!21 &1249349500
-Material:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Suimono2/waterscale_pro
-  m_Shader: {fileID: 4800000, guid: 519565fb8e66dd84f98c12f69ac2683a, type: 3}
-  m_ShaderKeywords: 
-  m_CustomRenderQueue: -1
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-      data:
-        first:
-          name: _ReflectionTex
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _BlurRamp
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Ramp2D
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _WaveLargeTex
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Surface1
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Surface2
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _WaveRamp
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _DepthRamp
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _FoamRamp
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _FoamTex
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 8.2840004, y: 8.2840004}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _CubeTex
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _CubeBDRF
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _WaveTex
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _FlowMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _WaveMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-    m_Floats:
-      data:
-        first:
-          name: _ReflDist
-        second: 1000
-      data:
-        first:
-          name: _ReflBlend
-        second: .00999999978
-      data:
-        first:
-          name: _MasterScale
-        second: 1
-      data:
-        first:
-          name: _BlurSpread
-        second: .00999999978
-      data:
-        first:
-          name: _RefrStrength
-        second: 25
-      data:
-        first:
-          name: _RefrSpeed
-        second: .5
-      data:
-        first:
-          name: _DepthAmt
-        second: .100000001
-      data:
-        first:
-          name: _UnderReflDist
-        second: 1
-      data:
-        first:
-          name: _Tess
-        second: 4
-      data:
-        first:
-          name: _minDist
-        second: 10
-      data:
-        first:
-          name: _maxDist
-        second: 25
-      data:
-        first:
-          name: _Displacement
-        second: .300000012
-      data:
-        first:
-          name: _MaskAmt
-        second: 1
-      data:
-        first:
-          name: _WaveHeight
-        second: 0
-      data:
-        first:
-          name: _DetailHeight
-        second: 0
-      data:
-        first:
-          name: _WaveShoreHeight
-        second: 0
-      data:
-        first:
-          name: _WaveScale
-        second: .25
-      data:
-        first:
-          name: _CenterHeight
-        second: 0
-      data:
-        first:
-          name: _MaxVariance
-        second: 3
-      data:
-        first:
-          name: _RefrScale
-        second: .5
-      data:
-        first:
-          name: _SpecScatterWidth
-        second: 2
-      data:
-        first:
-          name: _SpecScatterAmt
-        second: .0199999996
-      data:
-        first:
-          name: _ReflBlur
-        second: .00999999978
-      data:
-        first:
-          name: _FoamHeight
-        second: 5
-      data:
-        first:
-          name: _HeightFoamAmount
-        second: 1
-      data:
-        first:
-          name: _HeightFoamSpread
-        second: 2
-      data:
-        first:
-          name: _FoamSpread
-        second: .5
-      data:
-        first:
-          name: _EdgeBlend
-        second: 10
-      data:
-        first:
-          name: _EdgeSpread
-        second: 10
-      data:
-        first:
-          name: _BumpStrength
-        second: .899999976
-      data:
-        first:
-          name: _ReflectStrength
-        second: 1
-      data:
-        first:
-          name: _FlowScale
-        second: 0
-      data:
-        first:
-          name: _TideAmount
-        second: 1
-      data:
-        first:
-          name: _TideSpread
-        second: .400000006
-      data:
-        first:
-          name: _RimPower
-        second: 1
-      data:
-        first:
-          name: _castshadowEnabled
-        second: 1
-      data:
-        first:
-          name: _castshadowStrength
-        second: 1
-      data:
-        first:
-          name: _castshadowFade
-        second: 1
-      data:
-        first:
-          name: _suimono_uvx
-        second: -0
-      data:
-        first:
-          name: _suimono_uvy
-        second: -0
-      data:
-        first:
-          name: _suimono_uv2x
-        second: 0
-      data:
-        first:
-          name: _suimono_uv2y
-        second: 0
-      data:
-        first:
-          name: _suimono_uv3x
-        second: -0
-      data:
-        first:
-          name: _suimono_uv3y
-        second: -0
-      data:
-        first:
-          name: _suimono_uv4x
-        second: 0
-      data:
-        first:
-          name: _suimono_uv4y
-        second: 0
-      data:
-        first:
-          name: _suimono_DeepWaveHeight
-        second: 3.0150001
-      data:
-        first:
-          name: _suimono_DetailHeight
-        second: .810000002
-      data:
-        first:
-          name: _suimono_detScale
-        second: 10.5
-      data:
-        first:
-          name: _useDynamicReflections
-        second: 1
-      data:
-        first:
-          name: suimonoDiffHeight
-        second: 1
-    m_Colors:
-      data:
-        first:
-          name: _DynReflColor
-        second: {r: 1, g: 1, b: 1, a: .5}
-      data:
-        first:
-          name: _DepthColor
-        second: {r: .25, g: .25, b: .5, a: 1}
-      data:
-        first:
-          name: _DepthColorR
-        second: {r: .25, g: .25, b: .5, a: 1}
-      data:
-        first:
-          name: _DepthColorG
-        second: {r: .25, g: .25, b: .5, a: 1}
-      data:
-        first:
-          name: _DepthColorB
-        second: {r: .25, g: .25, b: .5, a: 1}
-      data:
-        first:
-          name: _HighColor
-        second: {r: 1, g: 0, b: 0, a: 1}
-      data:
-        first:
-          name: _LowColor
-        second: {r: 0, g: 1, b: 0, a: .100000001}
-      data:
-        first:
-          name: _SpecColorH
-        second: {r: .5, g: .5, b: .5, a: 1}
-      data:
-        first:
-          name: _SpecColorL
-        second: {r: .5, g: .5, b: .5, a: 1}
-      data:
-        first:
-          name: _FoamColor
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _EdgeColor
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _UnderColor
-        second: {r: .25, g: .25, b: .5, a: 1}
-      data:
-        first:
-          name: _TideColor
-        second: {r: 0, g: 0, b: .200000003, a: 1}
-      data:
-        first:
-          name: _castshadowColor
-        second: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &1266890566
 GameObject:
   m_ObjectHideFlags: 0
@@ -4031,7 +3115,7 @@ MonoBehaviour:
   isUnityPro: 1
   unityVersion: 5
   setCamera: {fileID: 63079641}
-  setTrack: {fileID: 1854471773}
+  setTrack: {fileID: 63079641}
   enableUnderwaterPhysics: 1
   enableUnderwaterFX: 1
   enableUnderwaterDeferred: 1
@@ -4144,11 +3228,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fxObject: {fileID: 1266890570}
-  effectRule: 000000000000000000000000
+  effectRule: 00000000
   effectData:
   - .0500000007
-  - 1.89999998
-  - 1.75
   resetRule: 
   effectSystemName: []
   effectSystem: 
@@ -4168,8 +3250,8 @@ MonoBehaviour:
   audioSpeed: .300000012
   tintCol: {r: 1, g: 1, b: 1, a: 1}
   clampRot: 0
-  typeIndex: 0
-  ruleIndex: 060000000700000004000000
+  typeIndex: 1
+  ruleIndex: 01000000
   systemIndex: 1
   useDarkUI: 1
   currentSpeed: 0
@@ -4499,7 +3581,7 @@ MonoBehaviour:
   getScale: {x: 8.2840004, y: 8.2840004}
   setDynRef: 1
   outColor: {r: .730000019, g: 1, b: .939999998, a: 0}
-  outValue: 10.5
+  outValue: 1
   ckSpeed: 0
   alwaysEmit: 0
   addSize: 0
@@ -4512,11 +3594,11 @@ MonoBehaviour:
   collsetpos: {x: 0, y: 0, z: 0}
   sizeScale: 0
   soundVol: 0
-  retFloat: 10.5
+  retFloat: 1
   oceanUseScale: 5
   currentOceanMult: 1
-  thisRenderMaterial: {fileID: 706783255}
-  scaleRenderMaterial: {fileID: 1249349500}
+  thisRenderMaterial: {fileID: 2100000, guid: 434999af31d77af4aacb107170c00ba3, type: 2}
+  scaleRenderMaterial: {fileID: 2100000, guid: df4f3b7f86753fe4dbd3dc92a60ce25e, type: 2}
   pixels_Surface: []
   pixels_Flow: []
   pixels_Wave: []
@@ -4568,125 +3650,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 831fc30dbd5721644bb40e62a6d2338b, type: 3}
   - {fileID: 8300000, guid: 486cdcdaf39e07f4686d2f5d84054b70, type: 3}
   - {fileID: 8300000, guid: 952453ae2ff2c8b499b58a459b8ea343, type: 3}
---- !u!1 &1854471772
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100042, guid: b493a5d859d24e943a80b420b49a7a54, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1854471773}
-  - 81: {fileID: 1854471778}
-  - 33: {fileID: 1854471774}
-  m_Layer: 0
-  m_Name: tuioCursor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1854471773
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400042, guid: b493a5d859d24e943a80b420b49a7a54, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1854471772}
-  m_LocalRotation: {x: 0, y: -.997600436, z: 0, w: .0692342669}
-  m_LocalPosition: {x: 246.649994, y: 10.5799999, z: 231.619995}
-  m_LocalScale: {x: 3, y: 3, z: 3}
-  m_Children:
-  - {fileID: 769597444}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
---- !u!33 &1854471774
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1854471772}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!81 &1854471778
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 8100000, guid: b493a5d859d24e943a80b420b49a7a54,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1854471772}
-  m_Enabled: 1
---- !u!1 &1972587110
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100000, guid: 1c4dd8a13f501b04f84fe824120f70bb, type: 2}
-  m_PrefabInternal: {fileID: 99079226}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1972587111}
-  - 114: {fileID: 1972587113}
-  - 114: {fileID: 1972587112}
-  m_Layer: 0
-  m_Name: Inputs
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1972587111
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400000, guid: 1c4dd8a13f501b04f84fe824120f70bb, type: 2}
-  m_PrefabInternal: {fileID: 99079226}
-  m_GameObject: {fileID: 1972587110}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2105030666}
-  m_RootOrder: 0
---- !u!114 &1972587112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400004, guid: 1c4dd8a13f501b04f84fe824120f70bb,
-    type: 2}
-  m_PrefabInternal: {fileID: 99079226}
-  m_GameObject: {fileID: 1972587110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1254801617, guid: 53d3dc02e71df20438406b9087fe1e5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  advancedProps: 0
-  tuioPort: 3333
-  supportedInputs: 7
-  tuioObjectMappings: []
-  cursorTags:
-    tagList:
-    - TUIO
-    - Touch
-  blobTags:
-    tagList:
-    - TUIO
-    - Touch
-  objectTags:
-    tagList:
-    - TUIO
-    - Object
---- !u!114 &1972587113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400002, guid: 1c4dd8a13f501b04f84fe824120f70bb,
-    type: 2}
-  m_PrefabInternal: {fileID: 99079226}
-  m_GameObject: {fileID: 1972587110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -102971247, guid: 20c2a163775f09b4cafa29b19d0c9204, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  advancedProps: 0
-  DisableOnMobilePlatforms: 1
-  Tags:
-    tagList:
-    - Mouse
 --- !u!1 &2008758734
 GameObject:
   m_ObjectHideFlags: 0
@@ -4768,7 +3731,7 @@ GameObject:
   m_Icon: {fileID: -2036504979, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2102519851
 Transform:
   m_ObjectHideFlags: 0
@@ -4805,8 +3768,8 @@ MonoBehaviour:
   actionType: 0
   effectDelay: {x: 1, y: 1}
   emitTime: {x: 1, y: 1}
-  emitNum: {x: 1, y: 1}
-  effectSize: {x: 1, y: 1}
+  emitNum: {x: 1, y: 6}
+  effectSize: {x: 1, y: 2.01052618}
   emitSpeed: .0500000007
   speedThreshold: 0
   directionMultiplier: 0
@@ -4823,52 +3786,6 @@ MonoBehaviour:
   systemIndex: 2
   useDarkUI: 1
   currentSpeed: 0
---- !u!1 &2105030664
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100002, guid: 1c4dd8a13f501b04f84fe824120f70bb, type: 2}
-  m_PrefabInternal: {fileID: 99079226}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 2105030666}
-  - 114: {fileID: 2105030665}
-  m_Layer: 0
-  m_Name: TouchScript
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2105030665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 1c4dd8a13f501b04f84fe824120f70bb,
-    type: 2}
-  m_PrefabInternal: {fileID: 99079226}
-  m_GameObject: {fileID: 2105030664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -409488130, guid: 20c2a163775f09b4cafa29b19d0c9204, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayDevice: {fileID: 0}
-  useSendMessage: 0
-  sendMessageEvents: 60
-  sendMessageTarget: {fileID: 0}
-  layers: []
---- !u!4 &2105030666
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400002, guid: 1c4dd8a13f501b04f84fe824120f70bb, type: 2}
-  m_PrefabInternal: {fileID: 99079226}
-  m_GameObject: {fileID: 2105030664}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1972587111}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
 --- !u!1 &2123465815
 GameObject:
   m_ObjectHideFlags: 0
